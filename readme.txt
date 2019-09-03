@@ -1,0 +1,1 @@
+Criar atributo voucherValue no produto base. Configurar id da coleção 

@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blueprint: A responsive product grid layout with touch-friendly Flickity galleries and Isotope-powered filter functionality." />
+  <meta name="keywords" content="blueprint, template, layout, grid, responsive, products, store, filter, isotope, flickity" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../../styles/skilltree.css">
+  <link rel="stylesheet" type="text/css" href="../../styles/mobile.css">
+  <link rel="stylesheet" type="text/css" href="../../styles/environment.css">
+  <link rel="stylesheet" type="text/css" href="../../styles/colors.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../styles/cards.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+</head>
+<body style="height: auto;">
+
+<!--HEADER-->
+  <header class="w3-top w3-bar w3-theme main-background-color-app" style="position: fixed !important;">
+    <img src="../../images/logo.png" class="logo2">
+  </header>
+
+
+<div class="loadingScreen">
+    <img src="../../images/loadings/doubleRing.gif" class="loadingGif">    
+</div>
+
+ <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form id="ecSearchForm">
+             <input type="text" id="ecSearchField" name="ecSearchField" placeholder="Any Troubles?"><br>
+            <input type="submit" class="hide" id="ecSearchButton" value="Buscar" onclick="answerCards()">
+        </form>
+        <hr>
+        <ul id="ecResultList">
+        </ul>
+
+<div class="service-container">
+    <div href="serviceDetail.html" class="service-profile hide">
+        <a style="text-decoration: none !important;" href="serviceDetail.html">
+      <div class="service-column-middle">
+        <p class="service-profile_title">Teste</p>
+        <p class="service-profile_text">Recarregue o cartão e ganhe 15% de deconto na sua próxima compra!</p>
+      </div>
+          </a>
+    </div>
+
+</div>
+
+<!--MENU INFERIOR-->
+<div class="navbar secondary-background-color-app">
+  <a href="voucher.html" class="fa fa-home menu-icon"></a>
+  <a href="skilltree.html" class="fa fa-trophy menu-icon"></a>
+  <a href="products.html" class="fa fa-shopping-cart menu-icon"></a>
+  <a href="service.html" class="fas fa-question menu-icon"></a>
+  <a href="profile.html" class="fas fa-user menu-icon"></a>
+</div>
+
+
+<script type="text/javascript" src="../../scripts/apis.js"></script>
+<script type="text/javascript" src="../../scripts/environment.js"></script>
+
+<!-- Engagement Cloud Calls -->
+<script type="text/javascript">
+
+    function answerCards(){
+
+        $("#ecSearchForm")[0].disabled = true;
+        $("#ecSearchField")[0].disabled = true;
+        $("#ecSearchButton")[0].disabled = true;
+        $(".loadingScreen").toggle();
+        $(".service-profile:not(:first)").remove();
+        
+        getAnswer($('#ecSearchField')[0].value).then(function(res){
+            
+            $.each(res, function(index,value){
+
+                var template = document.getElementsByClassName("service-profile")[0];
+                var container = document.getElementsByClassName("service-container")[0];
+                var row = template.cloneNode(true);
+
+                row.querySelectorAll(".service-profile_title")[0].innerHTML = value.title.snippets[0].text;
+                row.querySelectorAll(".service-profile_text")[0].innerHTML = value.textElements[0].snippets[0].text;
+                /*row.querySelectorAll(".balance-profile_time")[0].innerHTML = value.ProcessDt.substring(0,value.ProcessDt.search('T'));
+                row.querySelectorAll(".balance-profile_image")[0].src = imageTxn;*/
+
+                container.appendChild(row);
+                row.setAttribute("class","service-profile");
+            })
+        }).then(function(){
+            $("#ecSearchForm")[0].disabled = false;
+            $("#ecSearchField")[0].disabled = false;
+            $("#ecSearchButton")[0].disabled = false;
+            $(".loadingScreen").toggle();
+        })
+    }
+
+</script>
+
+
+
+<!--  CAPTURE INPUT FIELD ENTER KEY using JQUERY -->
+<script type="text/javascript">
+    $("#ecSearchField").keyup(function(event) {
+        if (event.keyCode === 13) {
+            console.log("[ENTER] PRESSED");
+            ecBeginAPICalls();
+            answerCards();
+            console.log('gian')
+            ecEndAPICalls();
+            return false;
+        }
+    });
+
+</script>
+
+</body>
+
+
+</html>
+
+
