@@ -79,10 +79,14 @@
           <div class="profile-points-label">Pontos</div>
         </div>
         <div class="card-prof-column-3"> 
+          <div class="profile-reais">--</div>
+          <div class="profile-reais-label">Reais</div>
+        </div>
+        <div class="card-prof-column-4"> 
           <div class="profile-level">--</div>
           <div class="profile-level-label">Nível</div>
         </div>
-        <div class="card-prof-column-4"> 
+        <div class="card-prof-column-5"> 
           <div class="profile-badges">
             <div class="badges-profile">
 
@@ -334,7 +338,9 @@
 
     /*NÍVEL E PONTOS*/
     document.getElementsByClassName("profile-points")[0].innerHTML = response.PointTypeAVal;
+    document.getElementsByClassName("profile-reais")[0].innerHTML = response.PointTypeBVal;
     document.getElementsByClassName("profile-level")[0].innerHTML = response.TierName;
+    
     if(response.TierName == null){document.getElementsByClassName("profile-level")[0].innerHTML = "INICIANTE";}
 
   })
