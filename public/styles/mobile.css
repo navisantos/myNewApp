@@ -1491,7 +1491,7 @@
     width: 80px;
     background-size: cover;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-    border: 5px solid #ffd833;
+    border: 5px solid #D81C1A;
     background-position-x: 50%;
     background-position-y: 50%;
     /* background-size: 57%; */
@@ -1881,7 +1881,7 @@ min-height: 5px;
     position: absolute;
     width: 100%;
     text-transform: uppercase;
-    background: #FFD833;
+    background: #D81C1A;
     font-size: 25px;
     font-weight: bold;
     font-family: 'Lato';
