@@ -612,7 +612,7 @@ function getOCCProductsFromCollection(collectionName){
 	return $.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstore/v1/products?categoryId="+collectionName,
+		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstoreui/v1/products?categoryId="+collectionName,
 		"method": "GET",
 		"headers": {
             "Authorization": "Basic YWRtaW46YWRtaW4=",
