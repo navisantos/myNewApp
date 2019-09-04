@@ -699,7 +699,7 @@ var getProductsJSON =
   "links": [
     {
       "rel": "self",
-      "href": "https://ccadmin-za6a.oracleoutsourcing.com/ccstoreui/v1/products?categoryId=ofertasEspeciais"
+      "href": "https://ccstore-za6a.oracleoutsourcing.com/ccstore/v1/products?categoryId=ofertasEspeciais"
     }
   ],
   "category": {
