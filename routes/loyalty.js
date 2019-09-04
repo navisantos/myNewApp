@@ -53,7 +53,7 @@ module.exports = function (app) {
 	app.post('/registerMember',function(req, res){
 
 			//Cria usuário no OCC
-			commerceInstance.post('/ccstore/v1/profiles',{
+			commerceInstance.post('/ccstoreui/v1/profiles',{
 				email : req.body.EmailAddress,
 				password : req.body.ContactPassword,
 				firstName : req.body.ContactFirstName,
