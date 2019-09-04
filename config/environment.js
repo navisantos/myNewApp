@@ -4,7 +4,7 @@ var btoa = require('btoa');
 /*ls.set("MemberID", "300000176112379");  */
 
 loyalty = {
-	environment : "adc4-zbia-fa-ext",
+	environment : "ucf1-zgjv-fa-ext",
 	username : "john.dunbar",
 	password : process.env.envPassword,
 	loyaltyProgram : "Programa de Fidelidade",
@@ -12,12 +12,12 @@ loyalty = {
 };
 
 commerce = {
-	environment : "ucf4-occ0040-occ",
+	environment : "ccadmin-za6a",
 	productCollection : "ofertas"
 };
 
 engagement ={
-	environment : "adc4-zbia-fa-ext",
+	environment : "ucf1-zgjv-fa-ext",
 	username : "john.dunbar",
 	password : process.env.envPassword
 }

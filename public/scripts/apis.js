@@ -461,11 +461,11 @@ function getMemberPoints18C(){
 	return $.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://adc4-zevg-fa-ext.oracledemos.com/crmRestApi/resources/latest/loyMembers/"+memberNumber+"",
+		"url": "https://"+environment+".oracledemos.com/crmRestApi/resources/latest/loyMembers/"+memberNumber+"",
 		"method": "GET",
 		"error": function(xhr, status, error){popupError(xhr.status+" - "+error);console.log(xhr);console.log(status);console.log(error)},
 		"headers": {
-			"authorization": "Basic am9obi5kdW5iYXI6cGp2NzY2ODk=",
+			"authorization": "Basic "+basicAuth()+"",
 			"content-type": "application/vnd.oracle.adf.resourceitem+json"
 		}
 	})
@@ -614,7 +614,7 @@ function getOCCProductsFromCollection(collectionName){
 	return $.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://"+OCCenvironment+".oracledemos.com/ccstoreui/v1/products?categoryId="+collectionName,
+		"url": "https://"+OCCenvironment+".oracledemos.com/ccstore/v1/products?categoryId="+collectionName,
 		"method": "GET",
 		"headers": {
 		}
@@ -626,7 +626,7 @@ function getOCCSpecificProductFromCollection(collectionName, id){
 	return $.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://"+OCCenvironment+".oracledemos.com/ccstoreui/v1/products?categoryId="+collectionName+"&q=id%20co%20%22"+id+"%22",
+		"url": "https://"+OCCenvironment+".oracledemos.com/ccstore/v1/products?categoryId="+collectionName+"&q=id%20co%20%22"+id+"%22",
 		"method": "GET",
 		"headers": {
 		}
@@ -638,7 +638,7 @@ function registerOCC(firstName, lastName, password, email, loyaltyProgram){
 	$.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://"+OCCenvironment+".oracledemos.com/ccstoreui/v1/profiles",
+		"url": "https://"+OCCenvironment+".oracledemos.com/ccstore/v1/profiles",
 		"method": "POST",
 		"headers": {
 			"content-type": "application/json"
@@ -658,7 +658,7 @@ function insertCartOCC(productId) {
 	$.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://"+OCCenvironment+".oracledemos.com/ccstoreui/v1/login",
+		"url": "https://"+OCCenvironment+".oracledemos.com/ccstore/v1/login",
 		"method": "POST",
 		"headers": {
 			"content-type": "application/x-www-form-urlencoded; charset=UTF-8"
@@ -670,7 +670,7 @@ function insertCartOCC(productId) {
 		$.ajax({
 			"async": true,
 			"crossDomain": true,
-			"url": "https://"+OCCenvironment+".oracledemos.com/ccstoreui/v1/orders/current",
+			"url": "https://"+OCCenvironment+".oracledemos.com/ccstore/v1/orders/current",
 			"method": "POST",
 			"headers": {
 				"Authorization": "Bearer " + response.access_token,
@@ -695,7 +695,7 @@ var getProductsJSON =
   "links": [
     {
       "rel": "self",
-      "href": "https://ccadmin-z0ga.oracleoutsourcing.com/ccstoreui/v1/products?categoryId=ofertasEspeciais"
+      "href": "https://ccadmin-za6a.oracleoutsourcing.com/ccstoreui/v1/products?categoryId=ofertasEspeciais"
     }
   ],
   "category": {
