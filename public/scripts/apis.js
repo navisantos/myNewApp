@@ -643,8 +643,7 @@ function registerOCC(firstName, lastName, password, email, loyaltyProgram){
 		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstore/v1/profiles",
 		"method": "POST",
 		"headers": {
-            "Authorization": "Basic YWRtaW46YWRtaW4=",
-			"content-type": "application/json"
+            "Authorization": "Basic YWRtaW46YWRtaW4="
 		},
 		"dataType"  : "json",
 		"data": "{\"email\":\"" + email + "\",\"password\":\"" + password + "\",\"firstName\":\"" + firstName + "\",\"lastName\":\"" + lastName + "\",\"receiveEmail\":\"no\",\"shippingAddresses\":[],\"locale\":\"en\",\"loyaltyMemberNumber\": \"" + loyaltyProgram + "\"}"
