@@ -53,7 +53,7 @@ module.exports = function (app) {
 	app.post('/registerMember',function(req, res){
 
 			//Cria usuário no OCC
-			commerceInstance.post('/ccstoreui/v1/profiles',{
+			/*commerceInstance.post('/ccstoreui/v1/profiles',{
 				email : req.body.EmailAddress,
 				password : req.body.ContactPassword,
 				firstName : req.body.ContactFirstName,
@@ -63,7 +63,7 @@ module.exports = function (app) {
 				locale : "en",
 				loyaltyMemberNumber : loyalty.memberNumber
 			})
-		.then(function(response1){
+		.then(function(response1){*/
 
 			//Cria usuário no Loyalty
 			loyaltyInstance.post('/loyaltyMembers/',{
@@ -76,7 +76,7 @@ module.exports = function (app) {
 			})
 			.then(function(response2){
 				res.json({
-					commerceData : response1.data,
+					/*commerceData : response1.data,*/
 					loyaltyData : response2.data
 				});
 			})
@@ -85,11 +85,11 @@ module.exports = function (app) {
 				res.redirect('/templates/register.html');
 			})
 
-		})
+		/*})
 		.catch(function(err){
 			console.log('Errado -->',err);
 			res.redirect('/templates/register.html');
-		})
+		})*/
 	})
 
 	//Get Loyalty Member
