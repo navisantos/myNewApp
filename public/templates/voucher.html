@@ -73,20 +73,17 @@
             <circle class="progress-ring__circle" stroke="#FFD833" stroke-width="6" fill="transparent" r="52" cx="60" cy="60"/>
             <image class="profile-img" xlink:href="../images/denis.png" clip-path="url(.progress-ring__circle)" />
           </svg>
+          <div class="nivel-photo">--</div>
         </div>
         <div class="card-prof-column-2">
           <div class="profile-points">--</div>
           <div class="profile-points-label">Pontos</div>
         </div>
         <div class="card-prof-column-3"> 
-          <div class="profile-reais">--</div>
-          <div class="profile-reais-label">Reais</div>
+          <div class="profile-level">--</div>
+          <div class="profile-level-label">Reais</div>
         </div>
         <div class="card-prof-column-4"> 
-          <div class="profile-level">--</div>
-          <div class="profile-level-label">Nível</div>
-        </div>
-        <div class="card-prof-column-5"> 
           <div class="profile-badges">
             <div class="badges-profile">
 
@@ -338,8 +335,8 @@
 
     /*NÍVEL E PONTOS*/
     document.getElementsByClassName("profile-points")[0].innerHTML = response.PointTypeAVal;
-    document.getElementsByClassName("profile-reais")[0].innerHTML = response.PointTypeBVal;
-    document.getElementsByClassName("profile-level")[0].innerHTML = response.TierName;
+    document.getElementsByClassName("profile-level")[0].innerHTML = response.PointTypeBVal;
+    document.getElementsByClassName("nivel-photo")[0].innerHTML = response.TierName;
     
     if(response.TierName == null){document.getElementsByClassName("profile-level")[0].innerHTML = "INICIANTE";}
 
