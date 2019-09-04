@@ -1,9 +1,10 @@
 var memberNumber = localStorage.getItem('MemberID');
 var environmentName = "newcoalision.herokuapp.com";
 
-
 function basicAuth(){
-	return window.btoa(username+":"+password);
+    
+    return "Basic am9obi5kdW5iYXI6bUxJODUzOTc=" ;
+    
 }
 
 //Registro de Usuário
