@@ -133,7 +133,7 @@ getTransaction(memberNumber).then(function(res){
 var tituloTxn;
 var descricaoTxn;
 var imageTxn;
-console.log("Member Number: " + memberNumber);
+console.log(res);
   $.each(res.items, function(index,value){
 
     var template = document.getElementsByClassName("balance-profile")[0];

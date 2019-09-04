@@ -308,7 +308,7 @@
 
 
     /*CARDS DE RECOMENDAÇÃO*/
-    console.log(response);
+    //console.log(response);
     if(eval("response."+NBO) == 1){$("#cardNBO1").removeClass("hide")}
     if(eval("response."+NBO) == 6){$("#cardNBO6").removeClass("hide")}
     if(eval("response."+NBO) == 7){$("#cardNBO7").removeClass("hide")}
@@ -341,7 +341,7 @@
 
   /*Level Progress Bar*/
   getMemberBalance().then(function(res){
-    console.log(res);
+    //console.log(res);
     setProgress(100*parseInt(res.items[0].Qualifyingbalance)/40);
   });
 
@@ -399,7 +399,7 @@ function setProgress(percent) {
 
 getOCCProductsFromCollection('destaques').then(function(res){
    $.each($('.banner-img'), function(index,value){
-    console.log(res.items)
+    console.log(res);
     value.src = 'https://ccstore-za6a.oracleoutsourcing.com'+res.items[index].primaryMediumImageURL;
   })
 })

@@ -260,7 +260,6 @@
   //Varre o HTML e esconde ou brilha as medalhas corretas
   $.each($(".mission_adj"), function(index, value){
     getMember().then(function(res){
-      console.log("value id: " + value.id);
       if(eval("res."+value.id) == 1){
         value.classList.remove("color_disabled");
         value.style.color = "#5C5346";

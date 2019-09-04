@@ -98,7 +98,7 @@ module.exports = function (app) {
 		loyaltyInstance.get('/loyMembers/'+ req.params.memberNumber,{
 		})
 		.then(function(response){
-			console.log(response.data);
+			//console.log(response.data);
 			res.send(response.data);
 		})
 		.catch(function(err){
@@ -114,7 +114,7 @@ module.exports = function (app) {
 		loyaltyInstance.get('/loyMembers/'+ req.params.memberNumber +'/'+'/child/pointbalances',{
 		})
 		.then(function(response){
-			console.log(response.data);
+			//console.log(response.data);
 			res.send(response.data);
 		})
 		.catch(function(err){
