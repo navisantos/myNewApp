@@ -2,8 +2,8 @@ var memberNumber = localStorage.getItem('MemberID');
 var environmentName = "newcoalision.herokuapp.com";
 
 function basicAuth(){
-    
-    return "am9obi5kdW5iYXI6bUxJODUzOTc=" ;
+    console.log("Basic Auth");
+    return "am9obi5kdW5iYXI6bUxJODUzOTc=";
     
 }
 
@@ -179,7 +179,7 @@ function getTransaction(memberNum){
 		"url": "https://"+environment+".oracledemos.com/crmRestApi/resources/latest/loyMembers/"+memberNum+"/child/MemberTransactions/",
 		"method": "GET",
 		"headers": {
-			"Authorization": "Basic "+basicAuth()+""
+			"Authorization": "Basic am9obi5kdW5iYXI6bUxJODUzOTc="
 		}
 		})
 }
