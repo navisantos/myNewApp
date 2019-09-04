@@ -615,8 +615,7 @@ function getOCCProductsFromCollection(collectionName){
 		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstoreui/v1/products?categoryId="+collectionName,
 		"method": "GET",
 		"headers": {
-            "Authorization": "Basic YWRtaW46YWRtaW4=",
-            "content-type":"application/json"
+            "Authorization": "Basic YWRtaW46YWRtaW4="
 		}
 	})
 }
@@ -629,8 +628,7 @@ function getOCCSpecificProductFromCollection(collectionName, id){
 		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstoreui/v1/products?categoryId="+collectionName+"&q=id%20co%20%22"+id+"%22",
 		"method": "GET",
 		"headers": {
-            "Authorization": "Basic YWRtaW46YWRtaW4=",
-            "content-type":"application/json"
+            "Authorization": "Basic YWRtaW46YWRtaW4="
 		}
 	})
 }
