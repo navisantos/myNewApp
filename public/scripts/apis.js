@@ -660,7 +660,7 @@ function insertCartOCC(productId) {
 	$.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstore/v1/login",
+		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstoreui/v1/login",
 		"method": "POST",
 		"headers": {
             "Authorization": "Basic YWRtaW46YWRtaW4=",
@@ -673,7 +673,7 @@ function insertCartOCC(productId) {
 		$.ajax({
 			"async": true,
 			"crossDomain": true,
-			"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstore/v1/orders/current",
+			"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstoreui/v1/orders/current",
 			"method": "POST",
 			"headers": {
 				"Authorization": "Bearer " + response.access_token,
