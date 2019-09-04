@@ -1,5 +1,5 @@
 var memberNumber = localStorage.getItem('MemberID');
-var environmentName = "coalitionappgb.herokuapp.com";
+var environmentName = "newcoalision.herokuapp.com";
 
 
 function basicAuth(){
