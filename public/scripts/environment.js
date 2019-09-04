@@ -3,14 +3,14 @@ var memberNumber = localStorage.getItem("MemberID");
 
 /*PRIMEIRO PASSO: Trocar as variáveis do ambiente abaixo:*/
 /*LOYALTY ENVIRONMENT*/
-var environment = "adc4-zbia-fa-ext";
+var environment = "ucf1-zgjv-fa-ext";
 var username = "john.dunbar";
-var password = "mJi56489";
+var password = "mLI85397";
 var loyaltyProgram = "Programa de Fidelidade";
 var pointType = "Pontos";
 
 /*COMMERCE ENVIRONMENT*/
-var OCCenvironment = "ucf4-occ0040-occ";
+var OCCenvironment = "ccadmin-za6a";
 var productCollection = "ofertas";
 
 
