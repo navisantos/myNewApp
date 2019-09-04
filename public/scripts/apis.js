@@ -641,7 +641,6 @@ function registerOCC(firstName, lastName, password, email, loyaltyProgram){
 		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstoreui/v1/profiles",
 		"method": "POST",
 		"headers": {
-            "Authorization": "Basic YWRtaW46YWRtaW4="
 		},
 		"dataType"  : "json",
 		"data": "{\"email\":\"" + email + "\",\"password\":\"" + password + "\",\"firstName\":\"" + firstName + "\",\"lastName\":\"" + lastName + "\",\"receiveEmail\":\"no\",\"shippingAddresses\":[],\"locale\":\"en\",\"loyaltyMemberNumber\": \"" + loyaltyProgram + "\"}"
@@ -661,7 +660,6 @@ function insertCartOCC(productId) {
 		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstoreui/v1/login",
 		"method": "POST",
 		"headers": {
-            "Authorization": "Basic YWRtaW46YWRtaW4=",
 			"content-type": "application/x-www-form-urlencoded; charset=UTF-8"
 		},
 		"data": "grant_type=password&username=" + user + "&password="+pass
