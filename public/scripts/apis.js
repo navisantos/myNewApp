@@ -3,7 +3,7 @@ var environmentName = "newcoalision.herokuapp.com";
 
 function basicAuth(){
     
-    return "Basic am9obi5kdW5iYXI6bUxJODUzOTc=" ;
+    return "am9obi5kdW5iYXI6bUxJODUzOTc=" ;
     
 }
 
