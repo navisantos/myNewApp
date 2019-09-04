@@ -626,7 +626,7 @@ function getOCCSpecificProductFromCollection(collectionName, id){
 	return $.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstore/v1/products?categoryId="+collectionName+"&q=id%20co%20%22"+id+"%22",
+		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstoreui/v1/products?categoryId="+collectionName+"&q=id%20co%20%22"+id+"%22",
 		"method": "GET",
 		"headers": {
             "Authorization": "Basic YWRtaW46YWRtaW4=",
@@ -640,7 +640,7 @@ function registerOCC(firstName, lastName, password, email, loyaltyProgram){
 	$.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstore/v1/profiles",
+		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstoreui/v1/profiles",
 		"method": "POST",
 		"headers": {
             "Authorization": "Basic YWRtaW46YWRtaW4="
