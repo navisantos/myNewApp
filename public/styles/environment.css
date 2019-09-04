@@ -1,5 +1,5 @@
 .main-background-color-app{
-	background: #272727 !important;
+	background: white !important;
 }
 
 .main-color-app{
@@ -7,13 +7,13 @@
 }
 
 .secondary-background-color-app{
-	background-color: #272727;
+	background-color: white;
 }
 
 .secondary-color-app{
-	color: #FFD833 !important;
+	color: #D81C1A !important;
 }
 
 .border-bottom-color{
-	border-bottom-color: #FFD833 !important;
+	border-bottom-color: #D81C1A !important;
 }
