@@ -131,11 +131,14 @@ getTransaction(memberNumber).then(function(res){
 var tituloTxn;
 var descricaoTxn;
 var imageTxn;
+console.log("Member Number: " + memberNumber);
   $.each(res.items, function(index,value){
 
     var template = document.getElementsByClassName("balance-profile")[0];
     var container = document.getElementsByClassName("balance-container")[0];
     var row = template.cloneNode(true);
+
+    console.log(value);
 
     if(value.SubTypeCode == 'ORA_RED_PROD' && value.TypeCode == 'ORA_TXN_RED'){
 
