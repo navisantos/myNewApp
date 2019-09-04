@@ -6,8 +6,6 @@ function basicAuth(){
 	return window.btoa(username+":"+password);
 }
 
-
-
 //Registro de Usuário
 function registerUser(ContactFirstName,ContactLastName,EmailAddress,WorkPhoneNumber,ContactPassword, ReferredByNumber){
 
@@ -614,9 +612,11 @@ function getOCCProductsFromCollection(collectionName){
 	return $.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://"+OCCenvironment+".oracledemos.com/ccstore/v1/products?categoryId="+collectionName,
+		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstore/v1/products?categoryId="+collectionName,
 		"method": "GET",
 		"headers": {
+            "Authorization": "Basic YWRtaW46YWRtaW4=",
+            "content-type":"application/json"
 		}
 	})
 }
@@ -626,9 +626,11 @@ function getOCCSpecificProductFromCollection(collectionName, id){
 	return $.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://"+OCCenvironment+".oracledemos.com/ccstore/v1/products?categoryId="+collectionName+"&q=id%20co%20%22"+id+"%22",
+		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstore/v1/products?categoryId="+collectionName+"&q=id%20co%20%22"+id+"%22",
 		"method": "GET",
 		"headers": {
+            "Authorization": "Basic YWRtaW46YWRtaW4=",
+            "content-type":"application/json"
 		}
 	})
 }
@@ -638,9 +640,10 @@ function registerOCC(firstName, lastName, password, email, loyaltyProgram){
 	$.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://"+OCCenvironment+".oracledemos.com/ccstore/v1/profiles",
+		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstore/v1/profiles",
 		"method": "POST",
 		"headers": {
+            "Authorization": "Basic YWRtaW46YWRtaW4=",
 			"content-type": "application/json"
 		},
 		"dataType"  : "json",
@@ -658,9 +661,10 @@ function insertCartOCC(productId) {
 	$.ajax({
 		"async": true,
 		"crossDomain": true,
-		"url": "https://"+OCCenvironment+".oracledemos.com/ccstore/v1/login",
+		"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstore/v1/login",
 		"method": "POST",
 		"headers": {
+            "Authorization": "Basic YWRtaW46YWRtaW4=",
 			"content-type": "application/x-www-form-urlencoded; charset=UTF-8"
 		},
 		"data": "grant_type=password&username=" + user + "&password="+pass
@@ -670,7 +674,7 @@ function insertCartOCC(productId) {
 		$.ajax({
 			"async": true,
 			"crossDomain": true,
-			"url": "https://"+OCCenvironment+".oracledemos.com/ccstore/v1/orders/current",
+			"url": "https://"+OCCenvironment+".oracleoutsourcing.com/ccstore/v1/orders/current",
 			"method": "POST",
 			"headers": {
 				"Authorization": "Bearer " + response.access_token,
