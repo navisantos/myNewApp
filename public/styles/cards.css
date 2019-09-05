@@ -564,7 +564,7 @@ div#voucherTemplate {
 
 .profile-points{
 
-font-size: 34px;
+font-size: 29px;
 
 font-weight: bold;
 }
@@ -600,17 +600,18 @@ top: 12%;
 
 .profile-level{
 
-font-size: 23px;
+font-size: 29px;
 
 text-transform: uppercase;
 
 font-weight: bold;
 
-margin-top: -10px;
+margin-top: -15px;
 
 margin-bottom: 4px;
 }
-.profile-level-label{font-size: 22px;text-transform: uppercase;font-weight: bold;color: #D81C1A;}
+.profile-level-label{font-size: 22px;text-transform: uppercase;font-weight: bold;margin-left: 8px;
+  margin-top: -5px; color: #D81C1A;}
 
 .card-prof-column-4{
 
