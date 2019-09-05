@@ -135,7 +135,232 @@ getMemberPoints("balance");
 })*/
 
 /*Produtos do OCC*/
-  getOCCProductsFromCollection(productCollection).then(function(res) {
+
+var produtos = {
+    "totalResults": 2,
+    "offset": 0,
+    "limit": 250,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://ccstore-za6a.oracleoutsourcing.com/ccstore/v1/products?categoryId=ofertas"
+        }
+    ],
+    "category": {
+        "longDescription": null,
+        "route": "/ofertas/category/ofertas",
+        "categoryImages": [],
+        "displayName": "ofertas",
+        "repositoryId": "ofertas",
+        "active": true,
+        "description": "ofertas",
+        "id": "ofertas"
+    },
+    "items": [
+        {
+            "listVolumePrice": null,
+            "excludeFromSitemap": false,
+            "relatedProducts": null,
+            "orderLimit": null,
+            "onlineOnly": false,
+            "listPrices": {
+                "reaisB2C": 20.0,
+                "defaultPriceGroup": 20.0
+            },
+            "type": null,
+            "largeImageURLs": [
+                "/ccstore/v1/images/?source=/file/v3350984041534298874/products/frete_renner.png&height=940&width=940"
+            ],
+            "listVolumePrices": {
+                "reaisB2C": null,
+                "defaultPriceGroup": null
+            },
+            "shippable": true,
+            "addOnProducts": [],
+            "primaryImageAltText": "Frete Grátis Na 1a Compra no Site",
+            "id": "frete_renner",
+            "brand": null,
+            "parentCategories": [
+                {
+                    "repositoryId": "ofertas",
+                    "fixedParentCategories": [
+                        {
+                            "repositoryId": "cat10002",
+                            "fixedParentCategories": []
+                        }
+                    ]
+                }
+            ],
+            "height": null,
+            "defaultProductListingSku": null,
+            "assetable": false,
+            "unitOfMeasure": null,
+            "primaryMediumImageURL": "/ccstore/v1/images/?source=/file/v3350984041534298874/products/frete_renner.png&height=475&width=475",
+            "seoUrlSlugDerived": "Frete Grátis Na 1a Compra no Site",
+            "weight": null,
+            "active": true,
+            "thumbImageURLs": [
+                "/ccstore/v1/images/?source=/file/v3350984041534298874/products/frete_renner.png&height=100&width=100"
+            ],
+            "creationDate": "2019-09-04T23:04:37.000Z",
+            "route": "/frete-gr%C3%A1tis-na-1a-compra-no-site/product/frete_renner",
+            "relatedArticles": [],
+            "mediumImageURLs": [
+                "/ccstore/v1/images/?source=/file/v3350984041534298874/products/frete_renner.png&height=475&width=475"
+            ],
+            "primarySourceImageURL": "/ccstore/v1/images/?source=/file/v3350984041534298874/products/frete_renner.png&height=300&width=300",
+            "parentCategory": null,
+            "sourceImageURLs": [
+                "/ccstore/v1/images/?source=/file/v3350984041534298874/products/frete_renner.png&height=300&width=300"
+            ],
+            "primarySmallImageURL": "/ccstore/v1/images/?source=/file/v3350984041534298874/products/frete_renner.png&height=300&width=300",
+            "avgCustRating": null,
+            "longDescription": null,
+            "primaryThumbImageURL": "/ccstore/v1/images/?source=/file/v3350984041534298874/products/frete_renner.png&height=100&width=100",
+            "nonreturnable": false,
+            "displayName": "Frete Grátis Na 1a Compra no Site",
+            "description": "Frete Grátis Na 1a Compra no Site",
+            "salePrices": {
+                "reaisB2C": null,
+                "defaultPriceGroup": null
+            },
+            "primaryFullImageURL": "/ccstore/v1/images/?source=/file/v3350984041534298874/products/frete_renner.png",
+            "primaryLargeImageURL": "/ccstore/v1/images/?source=/file/v3350984041534298874/products/frete_renner.png&height=940&width=940",
+            "smallImageURLs": [
+                "/ccstore/v1/images/?source=/file/v3350984041534298874/products/frete_renner.png&height=300&width=300"
+            ],
+            "shippingSurcharges": {
+                "reaisB2C": null,
+                "defaultPriceGroup": null
+            },
+            "saleVolumePrices": {
+                "reaisB2C": null,
+                "defaultPriceGroup": null
+            },
+            "primaryImageTitle": "Frete Grátis Na 1a Compra no Site",
+            "saleVolumePrice": null,
+            "childSKUs": [],
+            "relatedMediaContent": [],
+            "salePrice": null,
+            "fullImageURLs": [
+                "/ccstore/v1/images/?source=/file/v3350984041534298874/products/frete_renner.png"
+            ],
+            "length": null,
+            "variantValuesOrder": {},
+            "notForIndividualSale": false,
+            "repositoryId": "frete_renner",
+            "width": null,
+            "shippingSurcharge": null,
+            "productImagesMetadata": [
+                {}
+            ],
+            "configurable": false,
+            "listPrice": 20.0
+        },
+        {
+            "listVolumePrice": null,
+            "excludeFromSitemap": false,
+            "relatedProducts": null,
+            "orderLimit": null,
+            "onlineOnly": false,
+            "listPrices": {
+                "reaisB2C": 15.0,
+                "defaultPriceGroup": 15.0
+            },
+            "type": null,
+            "largeImageURLs": [
+                "/ccstore/v1/images/?source=/file/v7490014974543966659/products/youcom.png&height=940&width=940"
+            ],
+            "listVolumePrices": {
+                "reaisB2C": null,
+                "defaultPriceGroup": null
+            },
+            "shippable": true,
+            "addOnProducts": [],
+            "primaryImageAltText": "10% Em Toda Loja YouCom",
+            "id": "youcom",
+            "brand": null,
+            "parentCategories": [
+                {
+                    "repositoryId": "ofertas",
+                    "fixedParentCategories": [
+                        {
+                            "repositoryId": "cat10002",
+                            "fixedParentCategories": []
+                        }
+                    ]
+                }
+            ],
+            "height": null,
+            "defaultProductListingSku": null,
+            "assetable": false,
+            "unitOfMeasure": null,
+            "primaryMediumImageURL": "/ccstore/v1/images/?source=/file/v7490014974543966659/products/youcom.png&height=475&width=475",
+            "seoUrlSlugDerived": "10% Em Toda Loja YouCom",
+            "weight": null,
+            "active": true,
+            "thumbImageURLs": [
+                "/ccstore/v1/images/?source=/file/v7490014974543966659/products/youcom.png&height=100&width=100"
+            ],
+            "creationDate": "2019-09-04T23:09:01.000Z",
+            "route": "/10-em-toda-loja-youcom/product/youcom",
+            "relatedArticles": [],
+            "mediumImageURLs": [
+                "/ccstore/v1/images/?source=/file/v7490014974543966659/products/youcom.png&height=475&width=475"
+            ],
+            "primarySourceImageURL": "/ccstore/v1/images/?source=/file/v7490014974543966659/products/youcom.png&height=300&width=300",
+            "parentCategory": null,
+            "sourceImageURLs": [
+                "/ccstore/v1/images/?source=/file/v7490014974543966659/products/youcom.png&height=300&width=300"
+            ],
+            "primarySmallImageURL": "/ccstore/v1/images/?source=/file/v7490014974543966659/products/youcom.png&height=300&width=300",
+            "avgCustRating": null,
+            "longDescription": null,
+            "primaryThumbImageURL": "/ccstore/v1/images/?source=/file/v7490014974543966659/products/youcom.png&height=100&width=100",
+            "nonreturnable": false,
+            "displayName": "10% Em Toda Loja YouCom",
+            "description": "10% Em Toda Loja YouCom",
+            "salePrices": {
+                "reaisB2C": null,
+                "defaultPriceGroup": null
+            },
+            "primaryFullImageURL": "/ccstore/v1/images/?source=/file/v7490014974543966659/products/youcom.png",
+            "primaryLargeImageURL": "/ccstore/v1/images/?source=/file/v7490014974543966659/products/youcom.png&height=940&width=940",
+            "smallImageURLs": [
+                "/ccstore/v1/images/?source=/file/v7490014974543966659/products/youcom.png&height=300&width=300"
+            ],
+            "shippingSurcharges": {
+                "reaisB2C": null,
+                "defaultPriceGroup": null
+            },
+            "saleVolumePrices": {
+                "reaisB2C": null,
+                "defaultPriceGroup": null
+            },
+            "primaryImageTitle": "10% Em Toda Loja YouCom",
+            "saleVolumePrice": null,
+            "childSKUs": [],
+            "relatedMediaContent": [],
+            "salePrice": null,
+            "fullImageURLs": [
+                "/ccstore/v1/images/?source=/file/v7490014974543966659/products/youcom.png"
+            ],
+            "length": null,
+            "variantValuesOrder": {},
+            "notForIndividualSale": false,
+            "repositoryId": "youcom",
+            "width": null,
+            "shippingSurcharge": null,
+            "productImagesMetadata": [
+                {}
+            ],
+            "configurable": false,
+            "listPrice": 15.0
+        }
+    ]
+};
+  //getOCCProductsFromCollection(productCollection).then(function(res) {
+    var res = produtos;
     $.each(res.items, function(index,value){
       var template = document.getElementById("voucherTemplate");
       var container = document.getElementById("voucherContainer");
@@ -148,7 +373,7 @@ getMemberPoints("balance");
       container.appendChild(row);
       row.setAttribute("class","w3-cell-row");
     })
-  })
+  //})
 
 </script>
 
