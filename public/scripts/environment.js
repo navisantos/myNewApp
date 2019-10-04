@@ -4,7 +4,7 @@ var memberNumber = localStorage.getItem("MemberID");
 /*PRIMEIRO PASSO: Trocar as variáveis do ambiente abaixo:*/
 /*LOYALTY ENVIRONMENT*/
 var environment = "ucf1-zgjv-fa-ext";
-var username = "john.dunbar";
+var username = "george.grant";
 var password = "HoU99998";
 var loyaltyProgram = "Programa de Fidelidade";
 var pointType = "Pontos";
