@@ -3,7 +3,7 @@ var environmentName = "newcoalision.herokuapp.com";
 
 function basicAuth(){
     console.log("Basic Auth");
-    return "am9obi5kdW5iYXI6bUxJODUzOTc=";
+    return "Z2VvcmdlLmdyYW50OkhvVTk5OTk4";
     
 }
 
@@ -179,7 +179,7 @@ function getTransaction(memberNum){
 		"url": "https://"+environment+".oracledemos.com/crmRestApi/resources/latest/loyMembers/"+memberNum+"/child/MemberTransactions/",
 		"method": "GET",
 		"headers": {
-			"Authorization": "Basic am9obi5kdW5iYXI6bUxJODUzOTc="
+			"Authorization": "Basic Z2VvcmdlLmdyYW50OkhvVTk5OTk4"
 		}
 		})
 }
