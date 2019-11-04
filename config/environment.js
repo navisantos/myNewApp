@@ -5,7 +5,7 @@ var btoa = require('btoa');
 
 loyalty = {
 	environment : "ucf1-zgjv-fa-ext",
-	username : "george.grant",
+	username : "john.dunbar",
 	password : process.env.envPassword,
 	loyaltyProgram : "Programa de Fidelidade",
 	pointType : "Pontos"
@@ -18,7 +18,7 @@ commerce = {
 
 engagement ={
 	environment : "ucf1-zgjv-fa-ext",
-	username : "george.grant",
+	username : "john.dunbar",
 	password : process.env.envPassword
 }
 
