@@ -9,7 +9,7 @@ var password = "Jrw37934";
 var loyaltyProgram = "Programa de Fidelidade";
 var pointType = "Pontos";
 
-/*COMMERCE ENVIRONMENT*/
+/*COMMERCE ENVIRONMENT Gabi*/
 var OCCenvironment = "ccstore-za6a";
 var productCollection = "ofertas";
 
